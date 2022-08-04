@@ -1,0 +1,9 @@
+2022-08-04 17:14:32,798 - App.Word2Vec - INFO - Opening a file start
+2022-08-04 17:14:45,900 - App.Word2Vec - INFO - Opening a file finish
+2022-08-04 17:14:45,902 - App.Flask - INFO - Application started
+2022-08-04 17:26:04,021 - App.Word2Vec - INFO - Opening a file start
+2022-08-04 17:26:15,645 - App.Word2Vec - INFO - Opening a file finish
+2022-08-04 17:26:15,647 - App.Flask - INFO - Application started
+2022-08-04 17:38:38,122 - App.Word2Vec - INFO - Opening a file start
+2022-08-04 17:38:49,941 - App.Word2Vec - INFO - Opening a file finish
+2022-08-04 17:38:49,943 - App.Flask - INFO - Application started

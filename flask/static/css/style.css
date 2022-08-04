@@ -1,0 +1,152 @@
+.line{padding: 5px 40px;
+
+}
+.buts_container{
+    display: flex;
+    padding: 15px;
+    justify-content: space-around;
+
+}
+
+.hide_but{display: none}
+.navbar-collapse{justify-content: space-between;}
+textarea{width: 100%;height: 100%;}
+.container{
+    width: 60%;
+    display: none;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+}
+.container textarea{
+    height: 20%;
+    max-height: 40%;
+    max-width: 100%;
+}
+.container label{
+    margin-left: 50px;
+    margin-right: 10px;
+}
+.container a{
+    transition: 0.5s;
+    padding: 10px;
+    border-radius: 10%;
+    border: 2px solid green;
+    color: green;
+    cursor: pointer;
+    margin-left: 50px;
+}
+.container a:active{
+    background-color: green;
+    color: #fff;
+    border: 2px solid #fff;
+
+}
+.container a:hover{
+    background-color: #d8e6d8;
+    opacity: 0.6;
+}
+#stop_insert_new{
+    display: none;
+}
+.insert_new{
+    padding: 10px;
+    background-color: #fff;
+    color: green;
+    border-radius: 10px;
+    border: 2px solid green;
+    margin-bottom: 20px;
+}
+
+.insert_new:hover{
+    background-color: #d8e6d8;
+    opacity: 0.6;
+    cursor: pointer;
+
+}
+
+.modal{
+    background-color: #fff;
+    box-shadow: 10px 5px 5px grey;
+    border: 3px solid grey;
+    padding: 1% 3%;
+    border-radius: 2%;
+    width: 50%;
+    height: 50vh;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.modal span{
+    font-size: 18px;
+    margin: 12px 0;
+}
+.modal .bg{
+    font-size: 25px;
+    margin: 12px 0;
+}
+
+.modal p{
+    font-size: 20px;
+    color:red;
+    margin: 50px 0;
+}
+
+.delete{
+    transition: 0.5s;
+    background-color: red;
+    color:white;
+    font-size: 15px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+.delete:hover{
+    opacity: 0.5;
+
+}
+
+.simple_button{
+    transition: 0.5s;
+    background-color: white;
+    color:white;
+    font-size: 15px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: 2px solid green;
+    cursor: pointer;
+    color: green;
+    margin: 0 10px;
+
+}
+.simple_button:hover{
+    opacity: 0.5;
+
+}
+
+.save_button{
+    transition: 0.5s;
+    background-color: green;
+    color:white;
+    font-size: 15px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+    color: white;
+    margin: 0 10px;
+
+}
+.save_button:hover{
+    opacity: 0.5;
+
+}

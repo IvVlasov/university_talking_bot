@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ questions</title>
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+<body>
+    <button id = 'start_insert_new' class='insert_new'>Занести новый вопрос</button>
+    <button id = 'stop_insert_new' class='insert_new'>Отменить</button>
+
+    <div>
+        <form action="" method="post" id='insert_quest'>
+            <div class="container">
+
+              <label for="username"><b>Вопрос</b></label>
+              <textarea type="textarea" placeholder="Введите вопрос" name="quest" required></textarea>
+          
+              <label for="password"><b>Ответ</b></label>
+              <textarea type="textarea" placeholder="Введите ответ" name="answer" required></textarea>
+              <br>
+            <a type='button' id='insert_quest_btn' >Занести</a>
+
+            </div>
+          </form>
+    </div>
+
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>Вопрос</th>
+            <th>Ответ</th>
+            <th>Действие</th>
+        </tr>
+        {%- for el in data %}
+            <tr>
+                <td class='line'>{{ el.ident }}</td>
+                <td class='line q_{{ el.ident }} quest'>{{ el.quest }}</td>
+                <td class='line a_{{ el.ident }} answer'>{{ el.answer }}</td>
+                <td class='line buts_container'>
+                    <button class='delete_but delete_{{ el.ident }} delete' id={{ el.ident }}>Удалить</button>
+                    <button class='change_but change_{{ el.ident }} simple_button' id={{ el.ident }}>Изменить</button>
+                    <button type="submit" id = 'save_changes' class='save_but save_{{ el.ident }} hide_but save_button' id={{ el.ident }}>Сохранить</button>
+                    <button class='cancel_but cancel_{{ el.ident }} hide_but simple_button' id={{ el.ident }}>Отменить</button>
+                </td>
+            </tr>
+        {%- endfor %}
+
+    </table>
+
+    <div class='modal'>
+        <span class="bg"> Вы действительно хотите удалить из базы следующие значения? </span>
+        <span id="confirm_quest">Вопрос</span>
+        <span id="confirm_answer">Ответ</span>
+        <p>ОБЪЕКТ УДАЛИТСЯ БЕЗВОЗВРАТНО, БЕЗ ВОЗМОЖНОСТИ ВОССТАНОВЛЕНИЯ</p>
+        <div>
+            <button id='confirm_delete' class='delete'>Удалить</button>
+            <button id='cancel_confirm' class='simple_button' >Отменить</button>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js" integrity="sha512-wT7uPE7tOP6w4o28u1DN775jYjHQApdBnib5Pho4RB0Pgd9y7eSkAV1BTqQydupYDB9GBhTcQQzyNMPMV3cAew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="static/js/main.js"></script>
+
+</body>
+</html>
